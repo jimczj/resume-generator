@@ -1,0 +1,25 @@
+<%
+  const jsFiles = htmlWebpackPlugin.files.js.concat();
+  const polyfillFileIndex = jsFiles.findIndex(jsFile => jsFile.entryName === 'es5-polyfill');
+  const polyfillFile = jsFiles.splice(polyfillFileIndex, 1)[0];
+%>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>简历生成器</title>
+    <!--[if IE 8]>
+      <script type="text/javascript" src="<%= polyfillFile.path %>"></script>
+    <![endif]-->
+    <link rel="icon" type="image/png" href="<%= htmlWebpackPlugin.files.favicon %>">
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+      <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+    <% } %>
+  </head>
+  <body>
+    <div id="app"></div>
+    <% jsFiles.forEach(jsFile => { %>
+      <script type="text/javascript" src="<%= jsFile.path %>"></script>
+    <% }) %>
+  </body>
+</html>
