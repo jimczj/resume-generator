@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Button, Icon } from 'antd'
+
 import './index.scss'
 import dataSource from '../../../data.js'
 import BasicInfo from '../../components/basic-info/index.jsx'

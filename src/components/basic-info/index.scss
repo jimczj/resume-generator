@@ -5,7 +5,6 @@
     overflow: hidden;
   }
 
-
   &__title {
     font-size: 20px;
     border-bottom: solid 2px #2C405A;
@@ -16,9 +15,25 @@
     list-style-type: disc;
   }
 
-  &__item + .basic-info__item{
-    padding-top: 20px;
+  &__progress-box {
+    display: inline-block;
+    flex: 1;
   }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 5px;
+
+    @for $i from 2 through 10 {
+      &--col-#{$i} {
+        width: (100% / $i);
+        float: left;
+      }
+    }
+  }
+
 
   &__label {
     padding-right: 10px;

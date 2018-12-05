@@ -2,6 +2,8 @@ const dataSource = {
   'data': [
     {
       'title': '基本信息',
+      'listStyleType': 'none',
+      'col': '4',
       'data': [
         {
           'label': '个人信息',
@@ -23,6 +25,8 @@ const dataSource = {
     },
     {
       'title': '联系方式',
+      'listStyleType': 'none',
+      'col': '3',
       'data': [
         {
           'label': 'Email',
@@ -40,6 +44,8 @@ const dataSource = {
     },
     {
       'title': '应聘信息',
+      'listStyleType': 'none',
+      'col': '3',
       'data': [
         {
           'label': '期望职位',
@@ -58,6 +64,7 @@ const dataSource = {
     {
       'title': '主要技能',
       'listStyleType': 'none',
+      'col': '4',
       'data': [
         {
           'label': 'HTML/CSS',
@@ -80,6 +87,7 @@ const dataSource = {
     {
       'title': '主要技能2',
       'listStyleType': 'none',
+      'col': '2',
       'data': [
         {
           'label': 'HTML/CSS',
@@ -102,6 +110,7 @@ const dataSource = {
     {
       'title': '主要技能3',
       'listStyleType': 'none',
+      'col': '4',
       'data': [
         {
           'label': 'HTML/CSS',

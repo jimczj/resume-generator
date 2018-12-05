@@ -1,5 +1,6 @@
 import React from 'react'
 import { Rate, Progress } from 'antd'
+import classNames from 'classnames'
 
 import './index.scss'
 
@@ -12,7 +13,7 @@ export default class BasicInfo extends React.Component {
         <div className='basic-info__title'>
           {dataSource.title}
         </div>
-        <ul
+        <div
           className='basic-info__list'
           style={
             dataSource.listStyleType
@@ -25,9 +26,15 @@ export default class BasicInfo extends React.Component {
         >
           {
             dataSource.data.map(item => (
-              <li
-                className='basic-info__item'
+              <div
+                className={
+                  classNames(
+                    'basic-info__item',
+                    `basic-info__item--col-${dataSource.col}`
+                  )
+                }
                 key={item.label}>
+                <li></li>
                 {
                   item.label
                     ? <label className='basic-info__label'>
@@ -51,7 +58,12 @@ export default class BasicInfo extends React.Component {
                 }
                 {
                   item.percent
-                    ? <Progress percent={parseFloat(item.percent)} showInfo={false} />
+                    ? <div className='basic-info__progress-box'>
+                      <Progress
+                        percent={parseFloat(item.percent)}
+                        showInfo={false}
+                      />
+                    </div>
                     : null
                 }
                 {
@@ -59,10 +71,10 @@ export default class BasicInfo extends React.Component {
                     ? <Progress type="circle" width={50} percent={parseFloat(item.circlePercent)} />
                     : null
                 }
-              </li>
+              </div>
             ))
           }
-        </ul>
+        </div>
       </div>
     )
   }
