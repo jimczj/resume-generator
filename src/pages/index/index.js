@@ -1,11 +1,21 @@
 import Nerv from 'nervjs'
+
 import './index.scss'
+import dataSource from '../../../data.json'
+import BasicInfo from '../../components/basic-info'
 
 export default class Index extends Nerv.Component {
   render () {
     return (
-      <div>
-        hello world!!
+      <div className='container'>
+        {
+          dataSource.data.map(item => (
+            <BasicInfo
+              key={item.title}
+              dataSource={item}
+            />
+          ))
+        }
       </div>
     )
   }

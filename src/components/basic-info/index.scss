@@ -1,0 +1,23 @@
+.basic-info {
+  &__container{
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+
+  &__title {
+    font-size: 20px;
+    border-bottom: solid 2px #2C405A;
+  }
+
+  &__list {
+    padding: 20px;
+    list-style-type: disc;
+  }
+
+  &__label {
+    padding-right: 10px;
+  }
+
+}
