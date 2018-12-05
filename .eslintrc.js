@@ -5,11 +5,6 @@ module.exports = {
     node: true,
     es6: true
   },
-  settings: {
-    react: {
-      pragma: 'Nerv'
-    }
-  },
   plugins: ['react'],
   parser: 'babel-eslint',
   rules: {

@@ -1,6 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-import Nerv from 'nervjs'
-import App from './app'
+import React from 'react'
+import ReactDom from 'react-dom'
+import App from './app.jsx'
 
-/* eslint-disable */
-Nerv.render(<App />, document.getElementById('app'))
+ReactDom.render(<App />, document.getElementById('app'))

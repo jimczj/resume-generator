@@ -19,7 +19,7 @@
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-proposal-class-properties",
     ["@babel/plugin-transform-react-jsx", {
-      "pragma": "Nerv.createElement"
+      "pragma": "React.createElement"
     }],
     "babel-plugin-transform-es3-member-expression-literals",
     "babel-plugin-transform-es3-property-literals"

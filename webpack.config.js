@@ -85,9 +85,6 @@ module.exports = {
   resolve: {
     symlinks: true,
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    alias: {
-      nervjs: 'react'
-    }
   },
   module: {
     rules: [

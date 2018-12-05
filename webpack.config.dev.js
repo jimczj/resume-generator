@@ -44,10 +44,6 @@ module.exports = {
   resolve: {
     symlinks: true,
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    alias: {
-      react: 'nervjs',
-      'react-dom': 'nervjs'
-    }
   },
   module: {
     rules: [

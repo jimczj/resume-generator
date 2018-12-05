@@ -1,7 +1,7 @@
-import Nerv from 'nervjs'
+import React from 'react'
 import './index.scss'
 
-export default class BasicInfo extends Nerv.Component {
+export default class BasicInfo extends React.Component {
   render () {
     const dataSource = this.props.dataSource
 
