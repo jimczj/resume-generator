@@ -56,7 +56,7 @@ export default class BasicInfo extends React.Component {
                 }
                 {
                   item.circlePercent
-                    ? <Progress type="circle" width={50} percent={item.circlePercent} />
+                    ? <Progress type="circle" width={50} percent={parseFloat(item.circlePercent)} />
                     : null
                 }
               </li>

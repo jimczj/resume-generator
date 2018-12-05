@@ -78,7 +78,7 @@ const dataSource = {
       ]
     },
     {
-      'title': '主要技能',
+      'title': '主要技能2',
       'listStyleType': 'none',
       'data': [
         {
@@ -100,7 +100,7 @@ const dataSource = {
       ]
     },
     {
-      'title': '主要技能',
+      'title': '主要技能3',
       'listStyleType': 'none',
       'data': [
         {

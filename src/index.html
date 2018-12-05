@@ -15,7 +15,7 @@
       <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
     <% } %>
   </head>
-  <body>
+  <body style='-webkit-print-color-adjust: exact;'>
     <div id="app"></div>
     <% jsFiles.forEach(jsFile => { %>
       <script type="text/javascript" src="<%= jsFile %>"></script>
