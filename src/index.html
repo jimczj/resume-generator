@@ -17,6 +17,8 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript" src="<%= jsFiles %>"></script>
+    <% jsFiles.forEach(jsFile => { %>
+      <script type="text/javascript" src="<%= jsFile %>"></script>
+    <% }) %>
   </body>
 </html>
