@@ -3,8 +3,12 @@ const dataSource = {
     {
       'title': '基本信息',
       'listStyleType': 'none',
-      'col': '4',
+      'col': '2',
       'data': [
+        {
+          'avatar': 'square', // circle
+          'src': 'https://storage.360buyimg.com/mtd/home/221543234387016.jpg'
+        },
         {
           'label': '个人信息',
           'info': '陈** / 男 / 22 岁'

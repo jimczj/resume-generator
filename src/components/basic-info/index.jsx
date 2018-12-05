@@ -1,5 +1,5 @@
 import React from 'react'
-import { Rate, Progress } from 'antd'
+import { Rate, Progress, Avatar } from 'antd'
 import classNames from 'classnames'
 
 import './index.scss'
@@ -33,8 +33,18 @@ export default class BasicInfo extends React.Component {
                     `basic-info__item--col-${dataSource.col}`
                   )
                 }
-                key={item.label}>
+                key={
+                  item.label
+                    ? item.label
+                    : item.src
+                }
+              >
                 <li></li>
+                {
+                  item.avatar
+                    ? <Avatar shape={item.avatar} size={150} src={item.src} />
+                    : null
+                }
                 {
                   item.label
                     ? <label className='basic-info__label'>

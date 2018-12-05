@@ -1,3 +1,5 @@
+@import '../../style/index.scss';
+
 .basic-info {
   &__container{
     padding: 10px;
@@ -25,6 +27,8 @@
     align-items: center;
     text-align: left;
     padding: 5px;
+
+    @include clearfix;
 
     @for $i from 2 through 10 {
       &--col-#{$i} {
