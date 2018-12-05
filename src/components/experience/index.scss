@@ -1,0 +1,38 @@
+@import '../../style/index.scss';
+
+.experience {
+  &__container{
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 20px;
+    border-bottom: solid 2px #2C405A;
+  }
+
+  &__list {
+    border-left: 2px solid #2C405A;
+    margin-left: 15px;
+    list-style: none;
+
+    & > li {
+      position: relative;
+      top: -5px;
+      margin: 20px 0 20px 20px;
+    }
+  }
+}
+.circle {
+  height: 14px;
+  width: 14px;
+  border-radius: 100%;
+  background: #2C405A;
+  float: left;
+  position: absolute;
+  left: -28px;
+  top: 5px;
+}
+
+
