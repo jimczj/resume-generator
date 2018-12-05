@@ -16,6 +16,10 @@
     list-style-type: disc;
   }
 
+  &__item + .basic-info__item{
+    padding-top: 20px;
+  }
+
   &__label {
     padding-right: 10px;
   }

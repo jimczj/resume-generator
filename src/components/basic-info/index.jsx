@@ -1,4 +1,5 @@
 import React from 'react'
+import { Rate, Progress } from 'antd'
 
 import './index.scss'
 
@@ -11,7 +12,17 @@ export default class BasicInfo extends React.Component {
         <div className='basic-info__title'>
           {dataSource.title}
         </div>
-        <ul className='basic-info__list'>
+        <ul
+          className='basic-info__list'
+          style={
+            dataSource.listStyleType
+              ? {
+                listStyleType: dataSource.listStyleType,
+                listStyle: dataSource.listStyleType
+              }
+              : {}
+          }
+        >
           {
             dataSource.data.map(item => (
               <li
@@ -32,6 +43,21 @@ export default class BasicInfo extends React.Component {
                       {item.info}
                     </a>
                     : <span className='basic-info__info basic-info__text'>{item.info}</span>
+                }
+                {
+                  item.rate
+                    ? <Rate allowHalf disabled defaultValue={parseFloat(item.rate)} />
+                    : null
+                }
+                {
+                  item.percent
+                    ? <Progress percent={item.percent} showInfo={false} />
+                    : null
+                }
+                {
+                  item.circlePercent
+                    ? <Progress type="circle" width={50} percent={item.circlePercent} />
+                    : null
                 }
               </li>
             ))

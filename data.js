@@ -56,6 +56,72 @@ const dataSource = {
       ]
     },
     {
+      'title': '主要技能',
+      'listStyleType': 'none',
+      'data': [
+        {
+          'label': 'HTML/CSS',
+          'rate': '4.5'
+        },
+        {
+          'label': 'JavaScript',
+          'rate': '4'
+        },
+        {
+          'label': 'Node.js',
+          'rate': '4'
+        },
+        {
+          'label': 'Python',
+          'rate': '4'
+        }
+      ]
+    },
+    {
+      'title': '主要技能',
+      'listStyleType': 'none',
+      'data': [
+        {
+          'label': 'HTML/CSS',
+          'percent': '80'
+        },
+        {
+          'label': 'JavaScript',
+          'percent': '80'
+        },
+        {
+          'label': 'Node.js',
+          'percent': '90'
+        },
+        {
+          'label': 'Python',
+          'percent': '90'
+        }
+      ]
+    },
+    {
+      'title': '主要技能',
+      'listStyleType': 'none',
+      'data': [
+        {
+          'label': 'HTML/CSS',
+          'circlePercent': '80'
+        },
+        {
+          'label': 'JavaScript',
+          'circlePercent': '80'
+        },
+        {
+          'label': 'Node.js',
+          'circlePercent': '90'
+        },
+        {
+          'label': 'Python',
+          'circlePercent': '90'
+        }
+      ]
+    },
+    {
       'title': '技能清单',
       'data': [
         {
