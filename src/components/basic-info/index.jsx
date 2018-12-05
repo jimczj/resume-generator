@@ -51,7 +51,7 @@ export default class BasicInfo extends React.Component {
                 }
                 {
                   item.percent
-                    ? <Progress percent={item.percent} showInfo={false} />
+                    ? <Progress percent={parseFloat(item.percent)} showInfo={false} />
                     : null
                 }
                 {

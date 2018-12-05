@@ -142,8 +142,7 @@ const dataSource = {
         },
         {
           'label': '数据库相关',
-          'info': `MySQL/MongoDB, 在校期间设计过简单的社交网站 MySQL 数据表，工作期
-间也与后端开发讨论过其数据表的设计。`
+          'info': `MySQL/MongoDB, 在校期间设计过简单的社交网站 MySQL 数据表，工作期间也与后端开发讨论过其数据表的设计。`
         },
         {
           'label': '版本管理',
