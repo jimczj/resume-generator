@@ -33,7 +33,7 @@ export default class Index extends React.Component {
       <div className='index-page'>
         <div className='container'>
           {
-            dataSource.data.map(item => (
+            dataSource.children.map(item => (
               item.type === 'experience'
                 ? <Experience
                   key={item.title}

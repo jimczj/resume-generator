@@ -1,10 +1,10 @@
 const dataSource = {
-  'data': [
+  'children': [
     {
       'title': '基本信息',
       'listStyleType': 'none',
       'col': '2',
-      'data': [
+      'children': [
         {
           'avatar': 'square', // circle
           'src': 'https://storage.360buyimg.com/mtd/home/221543234387016.jpg'
@@ -31,7 +31,7 @@ const dataSource = {
       'title': '联系方式',
       'listStyleType': 'none',
       'col': '3',
-      'data': [
+      'children': [
         {
           'label': 'Email',
           'info': 'jimczj@gmail.com'
@@ -50,7 +50,7 @@ const dataSource = {
       'title': '应聘信息',
       'listStyleType': 'none',
       'col': '3',
-      'data': [
+      'children': [
         {
           'label': '期望职位',
           'info': 'Web 前端工程师'
@@ -69,7 +69,7 @@ const dataSource = {
       'title': '主要技能',
       'listStyleType': 'none',
       'col': '4',
-      'data': [
+      'children': [
         {
           'label': 'HTML/CSS',
           'rate': '4.5'
@@ -92,7 +92,7 @@ const dataSource = {
       'title': '主要技能2',
       'listStyleType': 'none',
       'col': '2',
-      'data': [
+      'children': [
         {
           'label': 'HTML/CSS',
           'percent': '80'
@@ -115,7 +115,7 @@ const dataSource = {
       'title': '主要技能3',
       'listStyleType': 'none',
       'col': '4',
-      'data': [
+      'children': [
         {
           'label': 'HTML/CSS',
           'circlePercent': '80'
@@ -137,7 +137,7 @@ const dataSource = {
     {
       'title': '项目经验',
       'type': 'experience',
-      'data': [
+      'children': [
         {
           'label': 'Mock Server 2017.12',
           'info': '实习时写的基于 Koa 的 Mac 上 Fiddler 的替代方案，搭配 vue-cli 项目使用，配置简单灵活，巧妙的实现了热更新路由，修改配置实时更新。做成 npm 插件后还提供了命令行接口。公司多个前端项目都在用。开发过程'
@@ -156,7 +156,7 @@ const dataSource = {
     },
     {
       'title': '技能清单',
-      'data': [
+      'children': [
         {
           'label': '编程语言',
           'info': 'JavaScript(ES6)*/HTML/CSS, JavaScript 基础扎实，熟练使用 async/await,Proxy 等 ES6 新语法，理解语义化的 HTML，熟练使用 CSS 进行布局'

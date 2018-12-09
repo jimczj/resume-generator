@@ -25,7 +25,7 @@ export default class BasicInfo extends React.Component {
           }
         >
           {
-            dataSource.data.map(item => (
+            dataSource.children.map(item => (
               <div
                 className={
                   classNames(

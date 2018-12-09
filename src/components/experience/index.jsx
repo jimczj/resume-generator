@@ -12,7 +12,7 @@ export default class Experience extends React.Component {
           {dataSource.title}
         </div>
         <ul className='experience__list'>
-          {dataSource.data.map(item => (
+          {dataSource.children.map(item => (
             <li key={item.label}>
               <div className="circle"></div>
               <h4>{item.label}</h4>
