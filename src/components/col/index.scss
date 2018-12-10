@@ -1,0 +1,14 @@
+@import '../../style/index.scss';
+
+.col {
+  @for $i from 1 through 23 {
+    &-#{$i} {
+      flex: $i;
+    }
+  }
+
+  &-24 {
+    display: block;
+    width: 100%;
+  }
+}

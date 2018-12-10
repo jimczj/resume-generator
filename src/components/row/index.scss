@@ -1,0 +1,11 @@
+@import '../../style/index.scss';
+
+.row {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+  &--block {
+    display: block;
+  }
+}

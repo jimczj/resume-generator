@@ -1,28 +1,43 @@
 import React from 'react'
 
-import { Row, Col } from 'antd'
-
+import Row from '../row/index.jsx'
+import Col from '../col/index.jsx'
 import BasicInfo from '../basic-info/index.jsx'
 import Experience from '../experience/index.jsx'
 import './index.scss'
 
 class ElementNode extends React.Component {
   _renderChildren (child) {
+    const style = {
+      backgroundColor: child.backgroundColor
+    }
     switch (child.type) {
       case 'basic':
-        return <Col span={child.col || 24} key={JSON.stringify(child)}>
+        return <Col
+          style={style}
+          span={parseInt(child.col) || 24}
+          key={JSON.stringify(child)}
+        >
           <BasicInfo
             dataSource={child}
           />
         </Col>
       case 'experience':
-        return <Col span={child.col || 24} key={JSON.stringify(child)}>
+        return <Col
+          style={style}
+          span={parseInt(child.col) || 24}
+          key={JSON.stringify(child)}
+        >
           <Experience
             dataSource={child}
           />
         </Col>
       default:
-        return <Col span={child.col || 24} key={JSON.stringify(child)}>
+        return <Col
+          style={style}
+          span={parseInt(child.col) || 24}
+          key={JSON.stringify(child)}
+        >
           <ElementNode
             dataSource={child}
           />
@@ -31,25 +46,24 @@ class ElementNode extends React.Component {
   }
 
   render () {
-    const dataSource = this.props.dataSource
+    const { content, children } = this.props.dataSource
+
 
     return (
-      <div className='element-node'>
+      <Row className='element-node'>
         {
-          dataSource.content
+          content
             ? <div className='element-node__title'>
-              {dataSource.content}
+              {content}
             </div>
-            : null
+            : <div></div>
         }
-        <Row className='element-node__children'>
-          {
-            dataSource.children && dataSource.children.map((item, i) => (
-              this._renderChildren(item)
-            ))
-          }
-        </Row>
-      </div>
+        {
+          children && children.map((item, i) => (
+            this._renderChildren(item)
+          ))
+        }
+      </Row>
     )
   }
 }

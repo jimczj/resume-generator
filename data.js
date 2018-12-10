@@ -3,6 +3,7 @@ const dataSource = {
     {
       'content': '',
       'col': 8,
+      'backgroundColor': '#00bfa5',
       'children': [
         {
           'content': '基本信息',
@@ -84,36 +85,36 @@ const dataSource = {
           'content': '技能清单',
           'children': [
             {
-              'label': '编程语言',
-              'content': 'JavaScript(ES6)*/HTML/CSS, JavaScript 基础扎实，熟练使用 async/await,Proxy 等 ES6 新语法，理解语义化的 HTML，熟练使用 CSS 进行布局'
+              'label': '',
+              'content': '编程语言：JavaScript(ES6)*/HTML/CSS, JavaScript 基础扎实，熟练使用 async/await,Proxy 等 ES6 新语法，理解语义化的 HTML，熟练使用 CSS 进行布局'
             },
             {
-              'label': '后端语言',
-              'content': 'Node.js, 曾使用 Express 框架实现了一个课程大作业网站的后端。'
+              'label': '',
+              'content': '后端语言：Node.js, 曾使用 Express 框架实现了一个课程大作业网站的后端。'
             },
             {
-              'label': '前端库与框架',
-              'content': 'Vue*/Angular2, 熟练使用 Vue，理解其基本原理，有实现复杂组件的能力。'
+              'label': '',
+              'content': '前端库与框架：Vue*/Angular2, 熟练使用 Vue，理解其基本原理，有实现复杂组件的能力。'
             },
             {
-              'label': '前端工具',
-              'content': 'Webpack, 能理解配置文件，并知道如何进行修改'
+              'label': '',
+              'content': '前端工具：Webpack, 能理解配置文件，并知道如何进行修改'
             },
             {
-              'label': '数据库相关',
-              'content': `MySQL/MongoDB, 在校期间设计过简单的社交网站 MySQL 数据表，工作期间也与后端开发讨论过其数据表的设计。`
+              'label': '',
+              'content': `数据库相关：MySQL/MongoDB, 在校期间设计过简单的社交网站 MySQL 数据表，工作期间也与后端开发讨论过其数据表的设计。`
             },
             {
-              'label': '版本管理',
-              'content': `Git 熟悉 Git flow.`
+              'label': '',
+              'content': `版本管理：Git 熟悉 Git flow.`
             },
             {
-              'label': '云和开放平台',
-              'content': `AWS`
+              'label': '',
+              'content': `云和开放平台：AWS`
             },
             {
-              'label': '其他',
-              'content': `GraphQL: 了解 GraphQL 基本使用方法，知道其使用场景，使用 Vue + GraphQL +
+              'label': '',
+              'content': `其他：GraphQL: 了解 GraphQL 基本使用方法，知道其使用场景，使用 Vue + GraphQL +
 MongoDB 实现过一个简单的任务管理系统`
             }
           ]

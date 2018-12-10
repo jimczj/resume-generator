@@ -19,12 +19,11 @@
 
   &__progress-box {
     display: inline-block;
-    flex: 1;
+    width: 100px;
   }
 
   &__item {
     display: flex;
-    align-items: center;
     text-align: left;
     padding: 5px;
 
@@ -41,6 +40,8 @@
 
   &__label {
     padding-right: 10px;
+    font-weight: bold;
+    min-width: 100px;
   }
 
 }
