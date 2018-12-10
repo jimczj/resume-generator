@@ -4,8 +4,7 @@ import { Button, Icon } from 'antd'
 
 import './index.scss'
 import dataSource from '../../../data.js'
-import BasicInfo from '../../components/basic-info/index.jsx'
-import Experience from '../../components/experience/index.jsx'
+import ElementNode from '../../components/element-node/index.jsx'
 
 export default class Index extends React.Component {
   constructor () {
@@ -32,19 +31,7 @@ export default class Index extends React.Component {
     return (
       <div className='index-page'>
         <div className='container'>
-          {
-            dataSource.children.map(item => (
-              item.type === 'experience'
-                ? <Experience
-                  key={item.title}
-                  dataSource={item}
-                />
-                : <BasicInfo
-                  key={item.title}
-                  dataSource={item}
-                />
-            ))
-          }
+          <ElementNode dataSource={dataSource}></ElementNode>
         </div>
         <div className={
           classNames(

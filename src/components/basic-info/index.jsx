@@ -7,11 +7,11 @@ import './index.scss'
 export default class BasicInfo extends React.Component {
   render () {
     const dataSource = this.props.dataSource
-
+    console.log(dataSource.children)
     return (
       <div className='basic-info__container'>
         <div className='basic-info__title'>
-          {dataSource.title}
+          {dataSource.content}
         </div>
         <div
           className='basic-info__list'
@@ -25,19 +25,14 @@ export default class BasicInfo extends React.Component {
           }
         >
           {
-            dataSource.children.map(item => (
+            dataSource.children && dataSource.children.map((item, i) => (
               <div
                 className={
                   classNames(
-                    'basic-info__item',
-                    `basic-info__item--col-${dataSource.col}`
+                    'basic-info__item'
                   )
                 }
-                key={
-                  item.label
-                    ? item.label
-                    : item.src
-                }
+                key={i}
               >
                 <li></li>
                 {
@@ -53,13 +48,13 @@ export default class BasicInfo extends React.Component {
                     : null
                 }
                 {
-                  item.info && item.info.startsWith('http')
+                  item.content && item.content.startsWith('http')
                     ? <a
                       className='basic-info__info basic-info__link'
-                      href={item.info}>
-                      {item.info}
+                      href={item.content}>
+                      {item.content}
                     </a>
-                    : <span className='basic-info__info basic-info__text'>{item.info}</span>
+                    : <span className='basic-info__info basic-info__text'>{item.content}</span>
                 }
                 {
                   item.rate
