@@ -8,7 +8,6 @@ const dataSource = {
       'children': [
         {
           'content': '基本信息',
-          'iconType': 'solution',
           'type': 'basic',
           'listStyleType': 'none',
           'children': [
@@ -36,22 +35,18 @@ const dataSource = {
         },
         {
           'content': '联系方式',
-          'iconType': 'profile',
           'type': 'basic',
           'listStyleType': 'none',
           'children': [
             {
-              'iconType': 'mail',
               'label': 'Email',
               'content': 'jimczj@gmail.com'
             },
             {
-              'iconType': 'github',
               'label': 'GitHub',
               'content': 'https://github.com/jimczj'
             },
             {
-              'iconType': 'phone',
               'label': '手机',
               'content': '158******06'
             }
@@ -59,7 +54,6 @@ const dataSource = {
         },
         {
           'content': '主要技能',
-          'iconType': 'radar-chart',
           'type': 'basic',
           'listStyleType': 'none',
           'children': [
@@ -89,7 +83,6 @@ const dataSource = {
       'children': [
         {
           'type': 'basic',
-          'iconType': 'bars',
           'content': '技能清单',
           'children': [
             {
@@ -129,7 +122,6 @@ MongoDB 实现过一个简单的任务管理系统`
         },
         {
           'content': '项目经验',
-          'iconType': 'project',
           'type': 'experience',
           'children': [
             {

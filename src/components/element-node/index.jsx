@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Icon } from 'antd'
 import Row from '../row/index.jsx'
 import Col from '../col/index.jsx'
 import BasicInfo from '../basic-info/index.jsx'
@@ -47,13 +47,14 @@ class ElementNode extends React.Component {
   }
 
   render () {
-    const { content, children } = this.props.dataSource
-
+    const { content, children, iconType } = this.props.dataSource
+    console.log(content, iconType)
     return (
       <Row className='element-node'>
         {
           content
             ? <div className='element-node__title'>
+              <Icon type={iconType} />
               {content}
             </div>
             : null

@@ -1,33 +1,45 @@
 import React from 'react'
-import { Rate, Progress, Avatar } from 'antd'
+
+import { Rate, Progress, Avatar, Icon } from 'antd'
 import classNames from 'classnames'
 
 import './index.scss'
 
 export default class BasicInfo extends React.Component {
   render () {
-    const dataSource = this.props.dataSource
+    const {
+      content,
+      iconType,
+      listStyleType,
+      children
+    } = this.props.dataSource
+
     return (
       <div
         className='basic-info__container'
         style={this.props.style}
       >
         <div className='basic-info__title'>
-          {dataSource.content}
+          {
+            iconType
+              ? <Icon style={{ marginRight: 10 }} type={iconType} />
+              : null
+          }
+          {content}
         </div>
         <div
           className='basic-info__list'
           style={
-            dataSource.listStyleType
+            listStyleType
               ? {
-                listStyleType: dataSource.listStyleType,
-                listStyle: dataSource.listStyleType
+                listStyleType,
+                listStyle: listStyleType
               }
               : {}
           }
         >
           {
-            dataSource.children && dataSource.children.map((item, i) => (
+            children && children.map((item, i) => (
               <div
                 className={
                   classNames(
@@ -38,6 +50,11 @@ export default class BasicInfo extends React.Component {
                 key={i}
               >
                 <li></li>
+                {
+                  item.iconType
+                    ? <Icon style={{ marginRight: 10 }} type={item.iconType} />
+                    : null
+                }
                 {
                   item.avatar
                     ? <Avatar shape={item.avatar} size={150} src={item.src} />
