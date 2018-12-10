@@ -10,19 +10,19 @@ class ElementNode extends React.Component {
   _renderChildren (child) {
     switch (child.type) {
       case 'basic':
-        return <Col span={child.col || 24} key={child}>
+        return <Col span={child.col || 24} key={JSON.stringify(child)}>
           <BasicInfo
             dataSource={child}
           />
         </Col>
       case 'experience':
-        return <Col span={child.col || 24} key={child}>
+        return <Col span={child.col || 24} key={JSON.stringify(child)}>
           <Experience
             dataSource={child}
           />
         </Col>
       default:
-        return <Col span={child.col || 24} key={child}>
+        return <Col span={child.col || 24} key={JSON.stringify(child)}>
           <ElementNode
             dataSource={child}
           />

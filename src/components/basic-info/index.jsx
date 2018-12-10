@@ -7,7 +7,6 @@ import './index.scss'
 export default class BasicInfo extends React.Component {
   render () {
     const dataSource = this.props.dataSource
-    console.log(dataSource.children)
     return (
       <div className='basic-info__container'>
         <div className='basic-info__title'>
@@ -29,7 +28,8 @@ export default class BasicInfo extends React.Component {
               <div
                 className={
                   classNames(
-                    'basic-info__item'
+                    'basic-info__item',
+                    `basic-info__item--col-${item.width}`
                   )
                 }
                 key={i}
