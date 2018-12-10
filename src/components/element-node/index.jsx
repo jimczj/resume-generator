@@ -9,14 +9,19 @@ import './index.scss'
 class ElementNode extends React.Component {
   _renderChildren (child) {
     const style = {
-      backgroundColor: child.backgroundColor
+      backgroundColor: child.backgroundColor,
+      color: child.fontColor
     }
+    const commonProps = {
+      style,
+      span: parseInt(child.col) || 24,
+      key: JSON.stringify(child)
+    }
+
     switch (child.type) {
       case 'basic':
         return <Col
-          style={style}
-          span={parseInt(child.col) || 24}
-          key={JSON.stringify(child)}
+          {...commonProps}
         >
           <BasicInfo
             dataSource={child}
@@ -24,9 +29,7 @@ class ElementNode extends React.Component {
         </Col>
       case 'experience':
         return <Col
-          style={style}
-          span={parseInt(child.col) || 24}
-          key={JSON.stringify(child)}
+          {...commonProps}
         >
           <Experience
             dataSource={child}
@@ -34,9 +37,7 @@ class ElementNode extends React.Component {
         </Col>
       default:
         return <Col
-          style={style}
-          span={parseInt(child.col) || 24}
-          key={JSON.stringify(child)}
+          {...commonProps}
         >
           <ElementNode
             dataSource={child}
@@ -48,7 +49,6 @@ class ElementNode extends React.Component {
   render () {
     const { content, children } = this.props.dataSource
 
-
     return (
       <Row className='element-node'>
         {
@@ -56,7 +56,7 @@ class ElementNode extends React.Component {
             ? <div className='element-node__title'>
               {content}
             </div>
-            : <div></div>
+            : null
         }
         {
           children && children.map((item, i) => (

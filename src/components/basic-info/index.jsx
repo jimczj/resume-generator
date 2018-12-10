@@ -8,7 +8,10 @@ export default class BasicInfo extends React.Component {
   render () {
     const dataSource = this.props.dataSource
     return (
-      <div className='basic-info__container'>
+      <div
+        className='basic-info__container'
+        style={this.props.style}
+      >
         <div className='basic-info__title'>
           {dataSource.content}
         </div>
@@ -50,6 +53,7 @@ export default class BasicInfo extends React.Component {
                 {
                   item.content && item.content.startsWith('http')
                     ? <a
+                      style={this.props.style}
                       className='basic-info__info basic-info__link'
                       href={item.content}>
                       {item.content}

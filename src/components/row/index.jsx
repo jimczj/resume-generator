@@ -8,12 +8,14 @@ export default class Row extends React.Component {
     const { children } = this.props
     let isFlex = true
     React.Children.map(children, child => {
-      isFlex = child.props.span && child.props.span !== 24
+      isFlex = child && child.props.span && child.props.span !== 24
     })
 
     return <div
       className={
-        classNames('row',
+        classNames(
+          this.props.className,
+          'row',
           {
             'row--block': !isFlex
           })

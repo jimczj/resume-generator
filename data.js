@@ -4,6 +4,7 @@ const dataSource = {
       'content': '',
       'col': 8,
       'backgroundColor': '#00bfa5',
+      'fontColor': '#fff',
       'children': [
         {
           'content': '基本信息',
