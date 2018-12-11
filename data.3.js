@@ -2,7 +2,7 @@ const dataSource = {
   'children': [
     {
       'content': '',
-      'col': 2,
+      'col': 8,
       'backgroundColor': '#00bfa5',
       'fontColor': '#fff',
       'children': [
@@ -15,8 +15,7 @@ const dataSource = {
           'children': [
             {
               'avatar': 'square', // circle
-              'src': 'https://storage.360buyimg.com/mtd/home/221543234387016.jpg',
-              'size': '200'
+              'src': 'https://storage.360buyimg.com/mtd/home/221543234387016.jpg'
             },
             {
               'label': '个人信息',
@@ -89,7 +88,7 @@ const dataSource = {
     },
     {
       'content': '',
-      'col': 20,
+      'col': 16,
       'children': [
         {
           'type': 'basic',

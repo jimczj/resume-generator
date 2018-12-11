@@ -2,39 +2,23 @@ import React from 'react'
 
 import { Rate, Progress, Avatar, Icon } from 'antd'
 import classNames from 'classnames'
+import ElementTitle from '../element-title/index.jsx'
 
 import './index.scss'
 
 export default class BasicInfo extends React.Component {
   render () {
     const {
-      content,
-      iconType,
       listStyleType,
       children,
-      underlineColor
     } = this.props.dataSource
-
-    const underlineStyle = {
-      borderColor: underlineColor
-    }
-    if (underlineColor === 'none') {
-      underlineStyle.borderBottom = 'none'
-    }
 
     return (
       <div
         className='basic-info__container'
         style={this.props.style}
       >
-        <div className='basic-info__title' style={underlineStyle}>
-          {
-            iconType
-              ? <Icon style={{ marginRight: 10 }} type={iconType} />
-              : null
-          }
-          {content}
-        </div>
+        <ElementTitle {...this.props.dataSource} />
         <div
           className='basic-info__list'
           style={
@@ -65,7 +49,7 @@ export default class BasicInfo extends React.Component {
                 }
                 {
                   item.avatar
-                    ? <Avatar shape={item.avatar} size={150} src={item.src} />
+                    ? <Avatar shape={item.avatar} size={parseInt(item.size) || 150} src={item.src} />
                     : null
                 }
                 {

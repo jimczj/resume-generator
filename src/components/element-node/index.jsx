@@ -1,9 +1,10 @@
 import React from 'react'
-import { Icon } from 'antd'
 import Row from '../row/index.jsx'
 import Col from '../col/index.jsx'
 import BasicInfo from '../basic-info/index.jsx'
 import Experience from '../experience/index.jsx'
+import ElementTitle from '../element-title/index.jsx'
+
 import './index.scss'
 
 class ElementNode extends React.Component {
@@ -47,28 +48,10 @@ class ElementNode extends React.Component {
   }
 
   render () {
-    const { content, children, iconType, underlineColor } = this.props.dataSource
-    const underlineStyle = {
-      borderColor: underlineColor
-    }
-    if (underlineColor === 'none') {
-      underlineStyle.borderBottom = 'none'
-    }
-
+    const { children } = this.props.dataSource
     return (
       <Row className='element-node'>
-        {
-          content
-            ? <div className='element-node__title' style={underlineStyle}>
-              {
-                iconType
-                  ? <Icon style={{ marginRight: 10 }} type={iconType} />
-                  : null
-              }
-              {content}
-            </div>
-            : null
-        }
+        <ElementTitle {...this.props.dataSource} />
         {
           children && children.map((item, i) => (
             this._renderChildren(item)
