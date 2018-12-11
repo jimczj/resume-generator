@@ -30,7 +30,7 @@ export default class Index extends React.Component {
   render () {
     return (
       <div className='index-page'>
-        <div className='container'>
+        <div className='resume-container'>
           <ElementNode dataSource={dataSource}></ElementNode>
         </div>
         <div className={
@@ -44,7 +44,7 @@ export default class Index extends React.Component {
         }>
           <Button onClick={this.handlePrint} type='primary'>
             <Icon type="file-pdf" />
-            保存为pdf
+            save as pdf
           </Button>
         </div>
 

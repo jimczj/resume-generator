@@ -1,11 +1,9 @@
 @import '../../style/index.scss';
 
 .element-node {
-  &__container{
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
 
   &__title {
     font-size: 20px;
