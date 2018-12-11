@@ -11,15 +11,23 @@ export default class BasicInfo extends React.Component {
       content,
       iconType,
       listStyleType,
-      children
+      children,
+      underlineColor
     } = this.props.dataSource
+
+    const underlineStyle = {
+      borderColor: underlineColor
+    }
+    if (underlineColor === 'none') {
+      underlineStyle.borderBottom = 'none'
+    }
 
     return (
       <div
         className='basic-info__container'
         style={this.props.style}
       >
-        <div className='basic-info__title'>
+        <div className='basic-info__title' style={underlineStyle}>
           {
             iconType
               ? <Icon style={{ marginRight: 10 }} type={iconType} />

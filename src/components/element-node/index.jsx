@@ -47,13 +47,19 @@ class ElementNode extends React.Component {
   }
 
   render () {
-    const { content, children, iconType } = this.props.dataSource
-    console.log(content, iconType)
+    const { content, children, iconType, underlineColor } = this.props.dataSource
+    const underlineStyle = {
+      borderColor: underlineColor
+    }
+    if (underlineColor === 'none') {
+      underlineStyle.borderBottom = 'none'
+    }
+
     return (
       <Row className='element-node'>
         {
           content
-            ? <div className='element-node__title'>
+            ? <div className='element-node__title' style={underlineStyle}>
               <Icon type={iconType} />
               {content}
             </div>

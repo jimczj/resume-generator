@@ -8,20 +8,26 @@ export default class Experience extends React.Component {
     const {
       content,
       iconType,
-      children
+      children,
+      underlineColor
     } = this.props.dataSource
+
+    const underlineStyle = {
+      borderColor: underlineColor
+    }
+    if (underlineColor === 'none') {
+      underlineStyle.borderBottom = 'none'
+    }
 
     return (
       <div className='experience__container'>
-        <div className='experience__title'>
-          {
-            content ? <div className='element-node__title'>
-              <Icon style={{ marginRight: 10 }} type={iconType} />
-              {content}
-            </div>
-              : null
-          }
-        </div>
+        {
+          content ? <div className='experience__title' style={underlineStyle}>
+            <Icon style={{ marginRight: 10 }} type={iconType} />
+            {content}
+          </div>
+            : null
+        }
         <ul className='experience__list'>
           {children.map(item => (
             <li key={item.label}>

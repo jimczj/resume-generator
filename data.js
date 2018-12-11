@@ -9,6 +9,7 @@ const dataSource = {
         {
           'content': '基本信息',
           'iconType': 'solution',
+          'underlineColor': 'none',
           'type': 'basic',
           'listStyleType': 'none',
           'children': [
@@ -39,6 +40,7 @@ const dataSource = {
           'iconType': 'profile',
           'type': 'basic',
           'listStyleType': 'none',
+          'underlineColor': 'none',
           'children': [
             {
               'iconType': 'mail',
@@ -62,6 +64,7 @@ const dataSource = {
           'iconType': 'radar-chart',
           'type': 'basic',
           'listStyleType': 'none',
+          'underlineColor': 'none',
           'children': [
             {
               'label': 'HTML/CSS',
