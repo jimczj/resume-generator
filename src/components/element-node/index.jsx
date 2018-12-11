@@ -60,7 +60,11 @@ class ElementNode extends React.Component {
         {
           content
             ? <div className='element-node__title' style={underlineStyle}>
-              <Icon type={iconType} />
+              {
+                iconType
+                  ? <Icon style={{ marginRight: 10 }} type={iconType} />
+                  : null
+              }
               {content}
             </div>
             : null

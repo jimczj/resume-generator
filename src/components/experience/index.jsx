@@ -23,7 +23,11 @@ export default class Experience extends React.Component {
       <div className='experience__container'>
         {
           content ? <div className='experience__title' style={underlineStyle}>
-            <Icon style={{ marginRight: 10 }} type={iconType} />
+            {
+              iconType
+                ? <Icon style={{ marginRight: 10 }} type={iconType} />
+                : null
+            }
             {content}
           </div>
             : null
